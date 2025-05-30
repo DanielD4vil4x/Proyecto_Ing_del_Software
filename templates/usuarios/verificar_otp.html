@@ -1,0 +1,18 @@
+<h2>Verificar código de autenticación</h2>
+<form method="post">
+  {% csrf_token %}
+  <label>Código:</label>
+  <input type="text" name="otp" required><br>
+  <button type="submit">Verificar</button>
+</form>
+
+{% if messages %}
+  {% for message in messages %}
+    <p>{{ message }}</p>
+  {% endfor %}
+{% endif %}
+
+{% if qr_base64 %}
+  <h3>Escanea este código QR en Google Authenticator:</h3>
+  <img src="data:image/png;base64,{{ qr_base64 }}" alt="Código QR">
+{% endif %}
