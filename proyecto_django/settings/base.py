@@ -104,6 +104,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://djangowebapp-gbgneucag0ccahgv.canadacentral-01.azurewebsites.net"
+]
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
