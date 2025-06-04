@@ -20,7 +20,7 @@ from two_factor.urls import urlpatterns as tf_urls
 urlpatterns = [
     path('', include(tf_urls)),
     path('admin/', admin.site.urls),
-    path('usuarios/', include('applications.usuarios.urls')),  # Ajusta según tu estructura
+    path('', include('applications.usuarios.urls')),  # Ajusta según tu estructura
    
 ]
 
