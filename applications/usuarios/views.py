@@ -40,7 +40,7 @@ def login_view(request):
 
 
 def menu_view(request):
-    return render(request, 'usuarios/menu.html')
+    return render(request, 'usuarios/pagina_principal.html')
 
 def logout_view(request):
     logout(request)
