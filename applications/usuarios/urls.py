@@ -4,8 +4,8 @@ from applications.usuarios import views
 
 urlpatterns = [
     
+    path('', views.menu_view, name='menu'),
     path('login/', login_view, name='login'),
-    path('menu/', views.menu_view, name='menu'),
     path('logout/', logout_view,name='logout'),
     path('registro/', registro_view, name='registro'),
     path('verificar-otp/', views.verificar_otp, name='verificar_otp'),
